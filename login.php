@@ -1,8 +1,11 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Registration</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -24,28 +27,27 @@
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 </head>
 <body>
-<!--
-	Upper Header Section
+<!-- 
+	Upper Header Section 
 -->
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="topNav">
         <div class="container">
             <div class="alignR">
-            </div>
-            <a href="index.php"> <span class="icon-home"></span> Home</a>
-            <a href="login.php"><span class="icon-edit"></span> Free Register </a>
-            <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a>
 
+                <a href="index.php"> <span class="icon-home"></span> Home</a>
+                <a href="company_registration.php"><span class="icon-edit"></span> Free Register </a>
+                <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a>
+
+            </div>
         </div>
     </div>
 </div>
-</div>
 
 <!--
-Lower Header Section
+Lower Header Section 
 -->
 <div class="container">
-
 
     <!--
     Navigation Bar Section
@@ -81,67 +83,43 @@ Lower Header Section
     <div class="row">
 
         <div class="span12">
-            <!--<ul class="breadcrumb">
+            <ul class="breadcrumb">
                 <li><a href="index.php">Home</a> <span class="divider">/</span></li>
-                <li class="active">Registration</li>
-            </ul>-->
-            <h3>Registration</h3>
+                <li class="active">Login</li>
+            </ul>
+            <h3> Login</h3>
             <hr class="soft"/>
 
             <div class="row">
-                <div class="span4"></div>
-                <div class="span6">
+                <div class="span4"> &nbsp;</div>
+                <div class="span5">
                     <div class="well">
-                        <h5>Add info</h5><br/>
-                        Fill all the fields to register<br/><br/><br/>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <h5>ALREADY REGISTERED ?</h5>
+                        <form action="login_or_register.php" method="post">
                             <div class="control-group">
-                                <label class="control-label">Restaurant Name</label>
+                                <label class="control-label" >Email</label>
                                 <div class="controls">
-                                    <input type="text" name="restaurant_name">
+                                    <input type="email" name="email" placeholder="E-mail" required>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label">Password</label>
+                                <label class="control-label" >Password</label>
                                 <div class="controls">
-                                    <input type="password" name="password">
+                                    <input type="password" name="password" placeholder="Password" required>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label">Email</label>
                                 <div class="controls">
-                                    <input type="email" name="email">
-                                </div>
-                            </div>
+                                    <button type="submit" name="login" class="defaultBtn">Sign in</button>
 
-                            <div class="control-group">
-                                <label class="control-label">Phone</label>
-                                <div class="controls">
-                                    <input type="text" name="phone">
                                 </div>
-                            </div>
-
-                            <div class="control-group">
-                                <label class="control-label" for="inputEmail">Image</label>
-                                <div class="controls">
-                                    <input type="file" name="fileToUpload" id="fileToUpload">
-                                </div>
-                            </div>
-
-
-                            <div class="controls">
-                                <button type="submit" name="submit" class="btn block">Register</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="span1"> &nbsp;</div>
-
             </div>
 
         </div>
-
-
     </div>
     <!--
     Clients

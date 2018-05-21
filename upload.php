@@ -42,7 +42,7 @@ if ($uploadOk == 0) {
 
     //echo $image_path;
 
-    //query to insert into product table
+    //query to insert into company table
     $insert_into_products = "insert into company (name,password,email,phone,image) 
                               VALUES ('$restaurant_name','$password','$email','$phone','$image_path')";
     $connection->query($insert_into_products);
@@ -56,4 +56,3 @@ if ($uploadOk == 0) {
         echo '<script>window.location="admin_panel.php"</script>';
     }
 }
-?>
