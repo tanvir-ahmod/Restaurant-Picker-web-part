@@ -1,5 +1,43 @@
 <?php
-session_start();
+include('connection.php');
+if (isset($_POST['login'])) {
+
+
+    if (!isset($_POST['email']) || !isset($_POST['password'])) {
+        echo "<script>alert('Failed to login! Please fill the fields correctly!')</script>";
+        echo '<script>window.location="login.php"</script>';
+        //echo "alert";
+    }
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+/*//user is super user
+    if ($username == 'admin' && $password == 'admin') {
+        session_start();
+        $_SESSION['user'] = 'admin';
+        $_SESSION['admin'] = 1;
+        echo "<script>alert('Welcome Admin!')</script>";
+        echo '<script>window.location="admin_panel.php"</script>';
+    }*/
+
+    $login_query = "SELECT * FROM company WHERE email ='$email' AND password = '$password'";
+    $user = $connection->query($login_query);
+
+
+    if (mysqli_num_rows($user) == 1) {
+        session_start();
+        $name = $user->fetch_assoc();
+        $_SESSION['company'] = $name['name'];
+        $_SESSION['id'] = $name['id'];
+        echo "<script>alert('Successfully logged in!')</script>";
+        echo '<script>window.location="index.php"</script>';
+    } else {
+        echo "<script>alert('Invalid email or password!')</script>";
+        echo '<script>window.location="login.php"</script>';
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,7 +133,7 @@ Lower Header Section
                 <div class="span5">
                     <div class="well">
                         <h5>ALREADY REGISTERED ?</h5>
-                        <form action="login_or_register.php" method="post">
+                        <form action="" method="post">
                             <div class="control-group">
                                 <label class="control-label" >Email</label>
                                 <div class="controls">
