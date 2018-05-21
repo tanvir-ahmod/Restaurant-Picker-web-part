@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Bootstrap styles -->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
     <!-- Customize styles -->
-    <link href="../assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
     <!-- font awesome styles -->
-    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <!--[if IE 7]>
     <link href="css/font-awesome-ie7.min.css" rel="stylesheet">
     <![endif]-->
@@ -21,7 +21,7 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
 </head>
 <body>
 <!--

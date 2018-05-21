@@ -1,24 +1,12 @@
 <?php
 
-session_start();
-
 include('connection.php');
 
-//admin authentication
-if (!isset($_SESSION['user']) || !isset($_SESSION['admin'])) {
-    echo "<script>alert('Please login to continue!')</script>";
-    echo '<script>window.location="login.php"</script>';
-} else if ($_SESSION['admin'] == 0) {
-    echo "<script>alert('Please login to continue')</script>";
-    echo '<script>window.location="login.php"</script>';
-}
-
-
-if (!isset($_POST['product_name']) || !isset($_POST['price']) ||
-    !isset($_POST['quantity'])
+if (!isset($_POST['restaurant_name']) || !isset($_POST['password']) ||
+    !isset($_POST['email']) || !isset($_POST['phone'])
 ) {
     echo "<script>alert('Fill all the fields correctly!')</script>";
-    echo '<script>window.location="admin_panel.php"</script>';
+    echo '<script>window.location="company_registration.php"</script>';
 }
 
 $target_dir = "images/";
@@ -44,9 +32,10 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
 
-    $product_name = $_POST['product_name'];
-    $price = $_POST['price'];
-    $quantity = $_POST['quantity'];
+    $restaurant_name = $_POST['restaurant_name'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
 
     //adding an unique id to distinguish between images
     $image_path = $target_dir . uniqid() . $_FILES["fileToUpload"]["name"];
@@ -54,12 +43,13 @@ if ($uploadOk == 0) {
     //echo $image_path;
 
     //query to insert into product table
-    $insert_into_products = "insert into products (p_name,image,price,quantity) VALUES ('$product_name','$image_path','$price','$quantity')";
+    $insert_into_products = "insert into company (name,password,email,phone,image) 
+                              VALUES ('$restaurant_name','$password','$email','$phone','$image_path')";
     $connection->query($insert_into_products);
 
     //saving image
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $image_path)) {
-        echo "<script>alert('Item successfully saved!')</script>";
+        echo "<script>alert('Registration complete!')</script>";
         echo '<script>window.location="admin_panel.php"</script>';
     } else {
         echo "<script>alert('Sorry, there was an error inserting items')</script>";
