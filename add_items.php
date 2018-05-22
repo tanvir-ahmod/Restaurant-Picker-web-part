@@ -67,7 +67,7 @@ Lower Header Section
                     <div class="well">
                         <h5>Add Items</h5><br/>
                         Fill all the fields to add a item<br/><br/><br/>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <form action="add_item_to_database.php" method="post" enctype="multipart/form-data">
                             <div class="control-group">
                                 <label class="control-label">Item Name</label>
                                 <div class="controls">
