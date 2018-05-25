@@ -49,9 +49,9 @@ if ($uploadOk == 0) {
     //saving image
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $image_path)) {
         echo "<script>alert('Registration complete!')</script>";
-        echo '<script>window.location="admin_panel.php"</script>';
+        echo '<script>window.location="index.php"</script>';
     } else {
         echo "<script>alert('Sorry, there was an error inserting items')</script>";
-        echo '<script>window.location="admin_panel.php"</script>';
+        echo '<script>window.location="add_items.php"</script>';
     }
 }
