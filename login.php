@@ -29,7 +29,7 @@ if (isset($_POST['login'])) {
         session_start();
         $name = $user->fetch_assoc();
         $_SESSION['company'] = $name['name'];
-        $_SESSION['id'] = $name['id'];
+        $_SESSION['companyID'] = $name['companyID'];
         echo "<script>alert('Successfully logged in!')</script>";
         echo '<script>window.location="index.php"</script>';
     } else {

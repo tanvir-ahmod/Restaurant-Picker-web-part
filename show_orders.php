@@ -11,9 +11,10 @@ if (!isset($_SESSION['user']) || !isset($_SESSION['admin'])) {
     echo '<script>window.location="login.php"</script>';
 }*/
 
-$order_info_query = "SELECT * FROM orders";
+//$company_id = $_SESSION['companyID'];
+$company_id = 1;
+$order_info_query = "SELECT * FROM orders WHERE company_id = '$company_id'";
 $result = $connection->query($order_info_query);
-
 
 ?>
 <!DOCTYPE html>
@@ -53,8 +54,7 @@ $result = $connection->query($order_info_query);
                 <a href="index.php"> <span class="icon-home"></span> Home</a>
                 <a href="login.php"><span class="icon-edit"></span> Free Register </a>
                 <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a>
-                <a href="cart.php"><span class="icon-shopping-cart"></span> <?php if (isset($_SESSION["cart"]))
-                        echo count($_SESSION["cart"]); ?> Item(s)</a>
+
             </div>
         </div>
     </div>
@@ -124,18 +124,17 @@ Lower Header Section
                         <tbody>
                         <?php while ($row = $result->fetch_assoc()) {
 
-                            $temp_user = $row['username'];
+
                             //getting user information
-                            $user_query = "SELECT * FROM user_information where username = '$temp_user'";
+                            $temp_user = $row['user_id'];
+                            $user_query = "SELECT * FROM users where id = '$temp_user'";
                             $user = $connection->query($user_query)->fetch_assoc();
 
-                            $id = $row['id'];
-                            echo "<tr><td><a href='show_voucher_information.php?id=$id'>$id</a></td>";
-                            echo "<td>" . $row['username'] . "</td>";
-                            echo "<td>" . $user['full_address'] . "</td>";
-                            echo "<td>" . $user['zipcode'] . "</td>";
-                            echo "<td>" . $row['total_money'] . "</td>";
-                            
+                            echo "<td>" . $row['item_id'] . "</td>";
+                            echo "<td>" . $row['item_name'] . "</td>";
+                            echo "<td>" . $row['user_id'] . "</td>";
+                            echo "<td>" . $row['location'] . "</td>";
+                            echo "<td>" . $user['phone'] . "</td>";
                             echo "<td>" . $row['order_time'] . "</td>";
                             echo "</tr>";
 
@@ -164,7 +163,6 @@ Lower Header Section
     -->
 
 </div><!-- /container -->
-
 
 
 </body>
