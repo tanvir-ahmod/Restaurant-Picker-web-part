@@ -37,8 +37,7 @@ if ($uploadOk == 0) {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 
-    //adding an unique id to distinguish between images
-    $image_path = $target_dir . uniqid() . $_FILES["fileToUpload"]["name"];
+    $image_path = $target_dir . $_FILES["fileToUpload"]["name"];
 
     //echo $image_path;
 

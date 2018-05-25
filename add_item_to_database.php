@@ -36,11 +36,7 @@ if ($uploadOk == 0) {
     $price = $_POST['price'];
     $description = $_POST['description'];
 
-
-    //adding an unique id to distinguish between images
-    $image_path = $target_dir . uniqid() . $_FILES["fileToUpload"]["name"];
-
-    //echo $image_path;
+    $image_path = $target_dir . $_FILES["fileToUpload"]["name"];
 
     //query to insert into item table
     $insert_into_products = "insert into item (companyID,item_name,description,price,image) 
