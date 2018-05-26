@@ -1,7 +1,16 @@
 <?php
 session_start();
 include('connection.php');
-$query = "SELECT * FROM item WHERE companyID = '1' ORDER BY id ASC";
+
+if(!isset($_SESSION['companyID']))
+{
+    echo "<script>alert('You are not logged in!')</script>";
+    echo '<script>window.location="login.php"</script>';
+}
+
+$id = $_SESSION['companyID'];
+
+$query = "SELECT * FROM item WHERE companyID = '$id' ORDER BY id ASC";
 
 $result = $connection->query($query);
 
@@ -49,8 +58,8 @@ $result = $connection->query($query);
                      <a href="#"><span class="icon-tumblr"></span></a>
                  </div>-->
                 <a href="index.php"> <span class="icon-home"></span> Home</a>
-                <a href="login.php"><span class="icon-edit"></span> Register/Login </a>
-                <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a>
+                <a href="login.php"><span class="icon-edit"></span> Register </a>
+                <a href="logout.php"><?php if (isset($_SESSION['companyID'])) echo "Logout"; ?></a>
 
             </div>
         </div>
@@ -88,7 +97,6 @@ Lower Header Section
                     </form>
                     <ul class="nav pull-right">
                         <li class="dropdown">
-                            <a href="login.php"> Login </a>
 
                         </li>
                     </ul>

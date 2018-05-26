@@ -22,14 +22,17 @@ if (isset($_POST['login'])) {
     }*/
 
     $login_query = "SELECT * FROM company WHERE email ='$email' AND password = '$password'";
-    $user = $connection->query($login_query);
+    $restaurant = $connection->query($login_query);
 
 
-    if (mysqli_num_rows($user) == 1) {
+    if (mysqli_num_rows($restaurant) == 1) {
         session_start();
-        $name = $user->fetch_assoc();
-        $_SESSION['company'] = $name['name'];
-        $_SESSION['companyID'] = $name['companyID'];
+        $temp_user = $restaurant->fetch_assoc();
+
+        $_SESSION['company'] = $temp_user['name'];
+        $_SESSION['companyID'] = $temp_user['id'];
+
+
         echo "<script>alert('Successfully logged in!')</script>";
         echo '<script>window.location="index.php"</script>';
     } else {
