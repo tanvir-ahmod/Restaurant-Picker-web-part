@@ -1,3 +1,63 @@
+<?php
+
+include('connection.php');
+
+if (!isset($_GET['id'])) {
+    echo "<script>alert('You can not edit this info!')</script>";
+    echo '<script>window.location="index.php"</script>';
+}
+
+$id = $_GET['id'];
+$info_query = "SELECT * FROM company WHERE id = '$id'";
+$company_info = $connection->query($info_query)->fetch_assoc();
+
+
+if (isset($_POST['submit'])) {
+
+    //if not all data sent
+    /* if (!isset($_POST['restaurant_name']) || !isset($_POST['password']) ||
+         !isset($_POST['email']) || !isset($_POST['phone'])
+     ) {
+         echo "<script>alert('Fill all the fields correctly!')</script>";
+         echo '<script>window.location="company_registration.php"</script>';
+     }*/
+
+    $restaurant_name = $_POST['restaurant_name'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+
+    //if image is submitted
+    if (isset($_FILES["fileToUpload"]["name"])) {
+        $image_path = 'images/' . $_FILES["fileToUpload"]["name"];
+        $sql_edit = "UPDATE  company SET name = '$restaurant_name', password = '$password', 
+                      image='$image_path',phone = '$phone',
+                      email = '$email' WHERE ID = '$id'";
+
+        $isUpdated = $connection->query($sql_edit);
+
+        if ($isUpdated || move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $image_path)) {
+
+            echo "<script>alert('Information saved successfully!')</script>";
+            echo '<script>window.location="index.php"</script>';
+        } else {
+            echo "<script>alert('Sorry, there was an error inserting items')</script>";
+            echo '<script>window.location="index.php"</script>';
+        }
+
+    } else {
+        $sql_edit = "UPDATE  company SET name = '$restaurant_name', password = '$password',
+                      phone = '$phone',email = '$email' WHERE ID = '$id'";
+        $connection->query($sql_edit);
+
+        echo "<script>alert('Successfully updated Item')</script>";
+        echo '<script>window.location="index.php"</script>';
+
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,11 +130,12 @@ Lower Header Section
                     <div class="well">
                         <h5>Update info</h5><br/>
                         Fill all the fields to Update<br/><br/><br/>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <form action="" method="post" enctype="multipart/form-data">
                             <div class="control-group">
                                 <label class="control-label">Restaurant Name</label>
                                 <div class="controls">
-                                    <input type="text" name="restaurant_name">
+                                    <input type="text" name="restaurant_name"
+                                           value="<?= (isset($restaurant_name)) ? $restaurant_name : $company_info['name']; ?>">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -86,14 +147,16 @@ Lower Header Section
                             <div class="control-group">
                                 <label class="control-label">Email</label>
                                 <div class="controls">
-                                    <input type="email" name="email">
+                                    <input type="email" name="email"
+                                           value="<?= (isset($email)) ? $email : $company_info['email']; ?>">
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <label class="control-label">Phone</label>
                                 <div class="controls">
-                                    <input type="text" name="phone">
+                                    <input type="text" name="phone"
+                                           value="<?= (isset($phone)) ? $phone : $company_info['phone']; ?>">
                                 </div>
                             </div>
 
