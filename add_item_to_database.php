@@ -1,6 +1,12 @@
 <?php
-
+session_start();
 include('connection.php');
+
+if(!isset($_SESSION['companyID']))
+{
+    echo "<script>alert('You are not logged in!')</script>";
+    echo '<script>window.location="login.php"</script>';
+}
 
 if (!isset($_POST['item_name']) || !isset($_POST['price'])
 ) {
@@ -31,7 +37,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
 
-    $company_id = 1; // $_SESSION['companyID'];
+    $company_id = $_SESSION['companyID'];
     $item_name = $_POST['item_name'];
     $price = $_POST['price'];
     $description = $_POST['description'];
@@ -46,9 +52,9 @@ if ($uploadOk == 0) {
     //saving image
     if ($isInserted && move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $image_path)) {
         echo "<script>alert('Item inserted!')</script>";
-        echo '<script>window.location="admin_panel.php"</script>';
+        echo '<script>window.location="index.php"</script>';
     } else {
         echo "<script>alert('Sorry, there was an error inserting items')</script>";
-        echo '<script>window.location="admin_panel.php"</script>';
+        echo '<script>window.location="index.php"</script>';
     }
 }

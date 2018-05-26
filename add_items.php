@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,21 +31,17 @@
     <div class="topNav">
         <div class="container">
             <div class="alignR">
+                <a href="index.php"> <span class="icon-home"></span> Home</a>
+                <a href="logout.php"><?php if (isset($_SESSION['companyID'])) echo "Logout"; ?>Logout</a>
             </div>
-            <a href="index.php"> <span class="icon-home"></span> Home</a>
-            <a href="login.php"><span class="icon-edit"></span> Free Register </a>
-            <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a>
-
         </div>
     </div>
-</div>
 </div>
 
 <!--
 Lower Header Section
 -->
 <div class="container">
-
     <!--
     Body Section
     -->

@@ -92,6 +92,9 @@ Lower Header Section
                     <ul class="nav">
                         <li class=""><a href="index.php">Home </a></li>
                     </ul>
+                    <ul class="nav">
+                        <li class=""><a href="add_items.php">Add Items</a></li>
+                    </ul>
                     <form action="search.php" method="post" class="navbar-search pull-right">
                         <input type="text" name="search_name" placeholder="Search" class="search-query span2">
                     </form>
