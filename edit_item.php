@@ -2,18 +2,29 @@
 include('connection.php');
 session_start();
 
-/*//admin authentication
-if (!isset($_SESSION['user']) || !isset($_SESSION['admin'])) {
+// authentication
+if (!isset($_SESSION['companyID'])) {
     echo "<script>alert('Please login to continue!')</script>";
     echo '<script>window.location="login.php"</script>';
-} else if ($_SESSION['admin'] == 0) {
-    echo "<script>alert('Please login to continue')</script>";
-    echo '<script>window.location="login.php"</script>';
-}*/
+}
+
 
 if (!isset($_POST['id']))
     header('location:index.php');
 $id = $_POST['id'];
+
+//authenticating
+$company_id = $_SESSION['companyID'];
+$item_company_id_query = "SELECT * FROM item where id = '$id'";
+$item_company_id = $connection->query($item_company_id_query)->fetch_assoc();
+
+//if unauthorized user wants to edit data
+if ($item_company_id['companyID'] != $company_id) {
+    echo "<script>alert('You are not valid user to perform this task!')</script>";
+    echo '<script>window.location="login.php"</script>';
+}
+
+
 $item_search_query = "SELECT * FROM item where id = '$id'";
 $item = $connection->query($item_search_query)->fetch_assoc();
 
@@ -57,10 +68,7 @@ if (isset($_POST['submit'])) {
         echo '<script>window.location="index.php"</script>';
 
     }
-
-
 }
-
 
 ?>
 

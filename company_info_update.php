@@ -1,6 +1,15 @@
 <?php
-
+session_start();
 include('connection.php');
+
+
+// authentication
+if (!isset($_SESSION['companyID'])) {
+    echo "<script>alert('Please login to continue!')</script>";
+    echo '<script>window.location="login.php"</script>';
+}
+
+
 
 if (!isset($_GET['id'])) {
     echo "<script>alert('You can not edit this info!')</script>";
@@ -8,6 +17,14 @@ if (!isset($_GET['id'])) {
 }
 
 $id = $_GET['id'];
+$company_id = $_SESSION['companyID'];
+
+//if unauthorized user wants to edit data
+if ($id != $company_id) {
+    echo "<script>alert('You are not valid user to perform this task!')</script>";
+    echo '<script>window.location="login.php"</script>';
+}
+
 $info_query = "SELECT * FROM company WHERE id = '$id'";
 $company_info = $connection->query($info_query)->fetch_assoc();
 

@@ -9,9 +9,7 @@ if(!isset($_SESSION['companyID']))
 }
 
 $id = $_SESSION['companyID'];
-
 $query = "SELECT * FROM item WHERE companyID = '$id' ORDER BY id ASC";
-
 $result = $connection->query($query);
 
 ?>
@@ -94,6 +92,9 @@ Lower Header Section
                     </ul>
                     <ul class="nav">
                         <li class=""><a href="add_items.php">Add Items</a></li>
+                    </ul>
+                    <ul class="nav">
+                        <li class=""><a href="company_info_update.php?id=<?php echo $id; ?>">Update Organization info</a></li>
                     </ul>
                     <form action="search.php" method="post" class="navbar-search pull-right">
                         <input type="text" name="search_name" placeholder="Search" class="search-query span2">
