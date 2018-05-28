@@ -3,11 +3,9 @@ include('connection.php');
 
 $response = array();
 
-//if id is given, only specific restaurant info will be sent
-//echo $_GET['id'];
+//if id is given, only specific restaurant info will be sent=
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-
     $get_restaurant_query = "SELECT * FROM company WHERE id ='$id'";
     $result = $connection->query($get_restaurant_query)->fetch_assoc();
 
@@ -32,13 +30,10 @@ if (isset($_GET['id'])) {
     $response['restaurant'] = array();
 
     while ($row = $result->fetch_assoc()) {
-        //print_r( $row);
-
         array_push($response['restaurant'], $row);
     }
 
 
 }
-
 
 echo json_encode($response);
