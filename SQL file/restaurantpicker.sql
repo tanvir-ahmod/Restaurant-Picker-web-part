@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2018 at 08:11 AM
+-- Generation Time: May 31, 2018 at 07:43 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -32,9 +32,17 @@ CREATE TABLE `company` (
   `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
-  `description` text NOT NULL,
-  `pic` varchar(40) NOT NULL
+  `email` text NOT NULL,
+  `phone` varchar(30) NOT NULL,
+  `image` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `company`
+--
+
+INSERT INTO `company` (`id`, `name`, `password`, `email`, `phone`, `image`) VALUES
+(2, 'asdfg', 'asdasd', 'shoukhin1993@gmail.com', '12345', 'images/5b02ab394576c5qzGIO.jpg');
 
 -- --------------------------------------------------------
 
@@ -45,10 +53,18 @@ CREATE TABLE `company` (
 CREATE TABLE `item` (
   `id` int(11) NOT NULL,
   `companyID` int(30) NOT NULL,
-  `name` varchar(30) NOT NULL,
+  `item_name` varchar(30) NOT NULL,
+  `description` text NOT NULL,
   `price` float NOT NULL,
-  `pic` varchar(40) NOT NULL
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `item`
+--
+
+INSERT INTO `item` (`id`, `companyID`, `item_name`, `description`, `price`, `image`) VALUES
+(7, 2, 'asdasdasdas', 'asdasdasdas', 123123, 'product_images/wallpaper-full-hd-3.jpg');
 
 -- --------------------------------------------------------
 
@@ -61,7 +77,8 @@ CREATE TABLE `orders` (
   `item_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
-  `time` datetime NOT NULL
+  `location` varchar(30) NOT NULL,
+  `order_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -73,9 +90,21 @@ CREATE TABLE `orders` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `password` varchar(30) NOT NULL,
   `phone` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`) VALUES
+(1, 'asd', 'asd@asd.com', 'asd', '000'),
+(2, 'baa', 'baa@baa.com', 'baa', '01'),
+(4, 'Shoukhin', 'shoukhin1993@gmail.com', 'huhaha', '01797470478'),
+(21, 'aaa', 'aaa@a.com', 'aaa', '111'),
+(25, 'name', 'sss@ss.com', 'qwer', '123123123');
 
 --
 -- Indexes for dumped tables
@@ -119,13 +148,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -137,7 +166,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Constraints for dumped tables
