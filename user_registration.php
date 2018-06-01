@@ -17,7 +17,7 @@ if (!isset($_POST['name']) || !isset($_POST['password']) || !isset($_POST['email
     $user_exist_query = "SELECT * FROM users WHERE email = '$email' OR phone = '$phone'";
     $user_exist = $connection->query($user_exist_query);
 
-    if ( mysqli_num_rows($user_exist) > 0) {
+    if (mysqli_num_rows($user_exist) > 0) {
         $response['error'] = true;
         $response['message'] = 'Email or phone already used!';
     } else {
@@ -27,7 +27,10 @@ if (!isset($_POST['name']) || !isset($_POST['password']) || !isset($_POST['email
 
         $connection->query($user_registration_query);
 
+        $insertedID = $connection->insert_id;
+
         $user = array(
+            'id' => $insertedID,
             'name' => $username,
             'email' => $email,
             'phone' => $phone
