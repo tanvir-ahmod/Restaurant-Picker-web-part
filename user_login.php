@@ -18,7 +18,9 @@ if (!isset($_POST['email']) || !isset($_POST['password'])
         $logged_user = $temp_user ->fetch_assoc();
         $name = $logged_user['name'];
         $phone = $logged_user['phone'];
+        $id = $logged_user['id'];
         $user = array(
+            'id' => $id,
             'name' => $name,
             'email' => $email,
             'phone' => $phone
