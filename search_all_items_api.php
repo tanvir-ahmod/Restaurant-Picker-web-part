@@ -21,13 +21,18 @@ if (isset($_GET['search_key'])) {
     $response['items'] = array();
 
     while ($row = $result->fetch_assoc()) {
+
+        //Getting restaurant name from id
+        $restaurant_id = $row['companyID'];
+        $get_restaurant_name = "SELECT name FROM company WHERE id = '$restaurant_id'";
+        $restaurant_name = $connection->query($get_restaurant_name)->fetch_assoc();
+
+        $row['restaurant_name'] = $restaurant_name['name'];
         array_push($response['items'], $row);
+
     }
 
-}
-
-else
-{
+} else {
     $response['error'] = true;
     $response['message'] = "Something went wrong! Please try again later";
 }
