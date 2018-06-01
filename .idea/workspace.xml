@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9879b90a-9c05-4149-9c5a-2dda50383f6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/show_restaurant_product_api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search_all_items_api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,13 +18,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show_restaurant_product_api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show_restaurant_product_api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/show_restaurant_product_api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="420">
+              <caret line="33" column="28" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="33" selection-end-column="28" />
               <folding>
                 <marker date="1527785979898" expanded="true" signature="283:324" ph="SELECT * FRO... item" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_all_items_api.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/search_all_items_api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-20">
+              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="true" />
+                <marker date="1527846785008" expanded="true" signature="239:288" ph="SELECT * FRO... item" />
               </folding>
             </state>
           </provider>
@@ -33,8 +46,8 @@
       <file leaf-file-name="restaurant_info_api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restaurant_info_api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="726">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <marker date="1527507060813" expanded="true" signature="196:233" ph="SELECT * FRO... company" />
                 <marker date="1527507060813" expanded="true" signature="650:671" ph="SELECT * FRO... company" />
@@ -73,6 +86,7 @@
         <option value="$PROJECT_DIR$/submit_order_api.php" />
         <option value="$PROJECT_DIR$/show_resturant_product_api.php" />
         <option value="$PROJECT_DIR$/show_restaurant_product_api.php" />
+        <option value="$PROJECT_DIR$/search_all_items_api.php" />
       </list>
     </option>
   </component>
@@ -119,8 +133,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -224,7 +238,8 @@
       <workItem from="1527613402563" duration="1417000" />
       <workItem from="1527701091482" duration="598000" />
       <workItem from="1527773209902" duration="473000" />
-      <workItem from="1527773832914" duration="2900000" />
+      <workItem from="1527773832914" duration="3096000" />
+      <workItem from="1527845705490" duration="1342000" />
     </task>
     <task id="LOCAL-00001" summary="company registration designed">
       <created>1526886953360</created>
@@ -373,17 +388,24 @@
       <option name="project" value="LOCAL" />
       <updated>1527528835458</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="restaurant product show api complete">
+      <created>1527787541792</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1527787541793</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39876000" />
+    <option name="totallyTimeSpent" value="41414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24130106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24508321" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -448,7 +470,8 @@
     <MESSAGE value="user login API complete" />
     <MESSAGE value="restaurant info api complete" />
     <MESSAGE value="submit order api complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="submit order api complete" />
+    <MESSAGE value="restaurant product show api complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="restaurant product show api complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -457,16 +480,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <marker date="1527349244234" expanded="true" signature="708:778" ph="SELECT * FRO... company" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_registration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -933,8 +946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restaurant_info_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="726">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="28" />
           <folding>
             <marker date="1527507060813" expanded="true" signature="196:233" ph="SELECT * FRO... company" />
             <marker date="1527507060813" expanded="true" signature="650:671" ph="SELECT * FRO... company" />
@@ -944,10 +957,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/show_restaurant_product_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="420">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="33" selection-end-column="28" />
           <folding>
             <marker date="1527785979898" expanded="true" signature="283:324" ph="SELECT * FRO... item" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_all_items_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <marker date="1527846785008" expanded="true" signature="239:288" ph="SELECT * FRO... item" />
           </folding>
         </state>
       </provider>
