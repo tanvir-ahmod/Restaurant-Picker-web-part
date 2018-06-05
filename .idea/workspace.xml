@@ -45,8 +45,8 @@
       <file leaf-file-name="submit_order_api.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/submit_order_api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+            <state relative-caret-position="44">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
                 <marker date="1528185665089" expanded="true" signature="524:683" ph="insert into orders... " />
               </folding>
@@ -243,7 +243,7 @@
       <workItem from="1528097440412" duration="915000" />
       <workItem from="1528104104671" duration="2152000" />
       <workItem from="1528183814351" duration="612000" />
-      <workItem from="1528184503314" duration="1144000" />
+      <workItem from="1528184503314" duration="1365000" />
     </task>
     <task id="LOCAL-00001" summary="company registration designed">
       <created>1526886953360</created>
@@ -427,11 +427,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527869962912</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="in submit order api phone field added">
+      <created>1528185707194</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1528185707194</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51130000" />
+    <option name="totallyTimeSpent" value="51351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -481,7 +488,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="company registration data can be saved to database" />
     <MESSAGE value="company registration login designed" />
     <MESSAGE value="company registration login complete" />
     <MESSAGE value="admin panel add product designed" />
@@ -506,7 +512,8 @@
     <MESSAGE value="search api implemented changed (restaurant name included)" />
     <MESSAGE value="Registration API changed(User information pushed)" />
     <MESSAGE value="Login API changed(User id added with user information)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login API changed(User id added with user information)" />
+    <MESSAGE value="in submit order api phone field added" />
+    <option name="LAST_COMMIT_MESSAGE" value="in submit order api phone field added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -968,7 +975,7 @@
         <state relative-caret-position="508">
           <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="29" />
           <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
+            <element signature="e#6#90#0#PHP" expanded="false" />
             <marker date="1527863573176" expanded="true" signature="239:288" ph="SELECT * FRO... item" />
             <marker date="1527863573176" expanded="true" signature="649:701" ph="SELECT NAME company" />
           </folding>
@@ -1010,8 +1017,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/submit_order_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+        <state relative-caret-position="44">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
             <marker date="1528185665089" expanded="true" signature="524:683" ph="insert into orders... " />
           </folding>
