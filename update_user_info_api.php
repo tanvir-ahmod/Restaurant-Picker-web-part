@@ -17,6 +17,11 @@ if (!isset($_POST['id'])
 } else {
     $id = $_POST['id'];
 
+    if (isset($_POST['name'])) {
+        $name = $_POST['name'];
+        $update_name_query = "UPDATE users SET name = '$name' WHERE id = '$id'";
+        $connection->query($update_name_query);
+    }
     if (isset($_POST['email'])) {
         $email = $_POST['email'];
         $update_email_query = "UPDATE users SET email = '$email' WHERE id = '$id'";
