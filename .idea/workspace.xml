@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9879b90a-9c05-4149-9c5a-2dda50383f6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user_order_history_api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/update_user_info_api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,13 +18,32 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show_restaurant_product_api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/show_restaurant_product_api.php">
+      <file leaf-file-name="update_user_info_api.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/update_user_info_api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="178">
+              <caret line="15" column="73" lean-forward="false" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
               <folding>
-                <marker date="1527785979898" expanded="true" signature="283:324" ph="SELECT * FRO... item" />
+                <element signature="e#6#91#0#PHP" expanded="true" />
+                <marker date="1528266500043" expanded="true" signature="412:445" ph="UPDATE users... " />
+                <marker date="1528266500043" expanded="true" signature="412:462" ph="UPDATE users... " />
+                <marker date="1528266500043" expanded="true" signature="631:687" ph="UPDATE users... " />
+                <marker date="1528266500043" expanded="true" signature="847:897" ph="UPDATE users... " />
+                <marker date="1528266500043" expanded="true" signature="983:1018" ph="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="company_info_update.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/company_info_update.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-836">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding>
+                <marker date="1527350902403" expanded="true" signature="671:709" ph="SELECT * FRO... company" />
+                <marker date="1527350902403" expanded="true" signature="1458:1645" ph="UPDATE compa... " />
+                <marker date="1527350902403" expanded="true" signature="2159:2302" ph="UPDATE item " />
               </folding>
             </state>
           </provider>
@@ -33,49 +52,10 @@
       <file leaf-file-name="user_login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="10" />
+            <state relative-caret-position="406">
+              <caret line="42" column="28" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="42" selection-end-column="28" />
               <folding>
                 <marker date="1527869933950" expanded="true" signature="308:377" ph="SELECT * FRO... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="submit_order_api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/submit_order_api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <marker date="1528201494400" expanded="true" signature="583:759" ph="insert into orders... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search_all_items_api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search_all_items_api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <marker date="1527863573176" expanded="true" signature="239:288" ph="SELECT * FRO... item" />
-                <marker date="1527863573176" expanded="true" signature="649:701" ph="SELECT NAME company" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_order_history_api.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user_order_history_api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-              <folding>
-                <element signature="e#6#90#0#PHP" expanded="true" />
-                <marker date="1528205347749" expanded="true" signature="220:262" ph="SELECT * FRO... item" />
-                <marker date="1528205347749" expanded="true" signature="594:638" ph="SELECT price... item" />
               </folding>
             </state>
           </provider>
@@ -113,6 +93,7 @@
         <option value="$PROJECT_DIR$/user_login.php" />
         <option value="$PROJECT_DIR$/submit_order_api.php" />
         <option value="$PROJECT_DIR$/user_order_history_api.php" />
+        <option value="$PROJECT_DIR$/update_user_info_api.php" />
       </list>
     </option>
   </component>
@@ -274,7 +255,8 @@
       <workItem from="1528184503314" duration="1407000" />
       <workItem from="1528189115909" duration="1462000" />
       <workItem from="1528201452780" duration="228000" />
-      <workItem from="1528204713751" duration="708000" />
+      <workItem from="1528204713751" duration="1319000" />
+      <workItem from="1528264694599" duration="1781000" />
     </task>
     <task id="LOCAL-00001" summary="company registration designed">
       <created>1526886953360</created>
@@ -479,17 +461,24 @@
       <option name="project" value="LOCAL" />
       <updated>1528201510979</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="user order history api created">
+      <created>1528205442905</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1528205442905</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53791000" />
+    <option name="totallyTimeSpent" value="56183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27987897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22087745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -533,7 +522,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="company registration login complete" />
     <MESSAGE value="admin panel add product designed" />
     <MESSAGE value="Item inserted to database" />
     <MESSAGE value="item view on home page complete" />
@@ -558,7 +546,8 @@
     <MESSAGE value="Login API changed(User id added with user information)" />
     <MESSAGE value="in submit order api phone field added" />
     <MESSAGE value="in submit order api amount  field added" />
-    <option name="LAST_COMMIT_MESSAGE" value="in submit order api amount  field added" />
+    <MESSAGE value="user order history api created" />
+    <option name="LAST_COMMIT_MESSAGE" value="user order history api created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -567,16 +556,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/add_item_to_database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="60" />
-          <folding>
-            <marker date="1527350080529" expanded="true" signature="1493:1660" ph="insert into item... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -937,18 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/company_info_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding>
-            <marker date="1527350902403" expanded="true" signature="671:709" ph="SELECT * FRO... company" />
-            <marker date="1527350902403" expanded="true" signature="1458:1645" ph="UPDATE compa... " />
-            <marker date="1527350902403" expanded="true" signature="2159:2302" ph="UPDATE item " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edit_item.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1025,23 +992,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="10" />
-          <folding>
-            <marker date="1527869933950" expanded="true" signature="308:377" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search_all_items_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="616">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <marker date="1527863573176" expanded="true" signature="239:288" ph="SELECT * FRO... item" />
             <marker date="1527863573176" expanded="true" signature="649:701" ph="SELECT NAME company" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_order_history_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <marker date="1528205347749" expanded="true" signature="220:262" ph="SELECT * FRO... item" />
+            <marker date="1528205347749" expanded="true" signature="594:638" ph="SELECT price... item" />
           </folding>
         </state>
       </provider>
@@ -1056,14 +1025,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_order_history_api.php">
+    <entry file="file://$PROJECT_DIR$/user_login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state relative-caret-position="406">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="42" selection-end-column="28" />
           <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <marker date="1528205347749" expanded="true" signature="220:262" ph="SELECT * FRO... item" />
-            <marker date="1528205347749" expanded="true" signature="594:638" ph="SELECT price... item" />
+            <marker date="1527869933950" expanded="true" signature="308:377" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company_info_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-836">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <marker date="1527350902403" expanded="true" signature="671:709" ph="SELECT * FRO... company" />
+            <marker date="1527350902403" expanded="true" signature="1458:1645" ph="UPDATE compa... " />
+            <marker date="1527350902403" expanded="true" signature="2159:2302" ph="UPDATE item " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/update_user_info_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="15" column="73" lean-forward="false" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <marker date="1528266500043" expanded="true" signature="412:445" ph="UPDATE users... " />
+            <marker date="1528266500043" expanded="true" signature="412:462" ph="UPDATE users... " />
+            <marker date="1528266500043" expanded="true" signature="631:687" ph="UPDATE users... " />
+            <marker date="1528266500043" expanded="true" signature="847:897" ph="UPDATE users... " />
+            <marker date="1528266500043" expanded="true" signature="983:1018" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
