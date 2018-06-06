@@ -49,7 +49,7 @@ if (!isset($_POST['id'])
     );
 
     $response['error'] = false;
-    $response['message'] = 'Successfully logged in!';
+    $response['message'] = 'Successfully updated profile!';
     $response['user'] = $user;
 
 }
