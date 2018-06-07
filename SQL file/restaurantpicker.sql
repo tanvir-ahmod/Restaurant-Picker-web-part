@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2018 at 07:43 AM
+-- Generation Time: Jun 07, 2018 at 07:00 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -42,7 +42,8 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`id`, `name`, `password`, `email`, `phone`, `image`) VALUES
-(2, 'asdfg', 'asdasd', 'shoukhin1993@gmail.com', '12345', 'images/5b02ab394576c5qzGIO.jpg');
+(2, 'asdfg', 'asdasd', 'shoukhin1993@gmail.com', '12345', 'images/5b02ab394576c5qzGIO.jpg'),
+(3, 'Restaurant', 'qwerty', 'qwerty@qwerty.com', '01', 'images/happy.jpg');
 
 -- --------------------------------------------------------
 
@@ -64,7 +65,10 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`id`, `companyID`, `item_name`, `description`, `price`, `image`) VALUES
-(7, 2, 'asdasdasdas', 'asdasdasdas', 123123, 'product_images/wallpaper-full-hd-3.jpg');
+(7, 2, 'asdasdasdas', 'asdasdasdas', 123123, 'product_images/wallpaper-full-hd-3.jpg'),
+(8, 3, 'Burger', 'Valoi!', 100, 'product_images/happy.jpg'),
+(9, 3, 'Biriyani', 'asdasdasdas', 1, 'product_images/cow.jpg'),
+(10, 3, 'asdadfsdf', 'asdasdasdas', 111111, 'product_images/KaDnEmn.jpg');
 
 -- --------------------------------------------------------
 
@@ -77,9 +81,21 @@ CREATE TABLE `orders` (
   `item_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `phone` varchar(30) NOT NULL,
   `location` varchar(30) NOT NULL,
   `order_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `item_id`, `user_id`, `company_id`, `amount`, `phone`, `location`, `order_time`) VALUES
+(1, 8, 1, 3, 0, '000', 'asaa', '2018-06-05 14:00:38'),
+(2, 8, 1, 3, 0, '000', 'asaa', '2018-06-05 14:00:48'),
+(3, 8, 1, 3, 10, '000', 'hgfghg', '2018-06-05 18:22:17'),
+(4, 9, 1, 3, 2, '82929', 'Graduate Garden', '2018-06-05 19:42:13');
 
 -- --------------------------------------------------------
 
@@ -100,11 +116,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`) VALUES
-(1, 'asd', 'asd@asd.com', 'asd', '000'),
+(1, 'aaaa', 'asd@asd.com', 'asd', '0211121'),
 (2, 'baa', 'baa@baa.com', 'baa', '01'),
-(4, 'Shoukhin', 'shoukhin1993@gmail.com', 'huhaha', '01797470478'),
+(4, 'Shoukhin', 'qqq@qq.com', '1234', '1234'),
 (21, 'aaa', 'aaa@a.com', 'aaa', '111'),
-(25, 'name', 'sss@ss.com', 'qwer', '123123123');
+(25, 'name', 'sss@ss.com', 'qwer', '123123123'),
+(26, 'a', 'aa@aa.com', 'a', '01212121'),
+(27, 'aaaa', 'aaaa@a.com', 'aaaa', '1111');
 
 --
 -- Indexes for dumped tables
@@ -148,25 +166,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
