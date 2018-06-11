@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9879b90a-9c05-4149-9c5a-2dda50383f6b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/company_info_update.php" afterPath="$PROJECT_DIR$/company_info_update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/company_registration.php" afterPath="$PROJECT_DIR$/company_registration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edit_item.php" afterPath="$PROJECT_DIR$/edit_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search_all_items_api.php" afterPath="$PROJECT_DIR$/search_all_items_api.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="company_info_update.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="company_info_update.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/company_info_update.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -67,6 +64,31 @@
                 <marker date="1528714451278" expanded="true" signature="670:708" ph="SELECT * FRO... company" />
                 <marker date="1528714451278" expanded="true" signature="1457:1644" ph="UPDATE compa... " />
                 <marker date="1528714451278" expanded="true" signature="2158:2301" ph="UPDATE item " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_restaurant_product_api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/show_restaurant_product_api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <marker date="1528717111090" expanded="true" signature="283:324" ph="SELECT * FRO... item" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_all_items_api.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/search_all_items_api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+              <folding>
+                <marker date="1528717064418" expanded="true" signature="239:288" ph="SELECT * FRO... item" />
+                <marker date="1528717064418" expanded="true" signature="648:700" ph="SELECT NAME company" />
               </folding>
             </state>
           </provider>
@@ -94,8 +116,6 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/restaurant_info_api.php" />
         <option value="$PROJECT_DIR$/show_resturant_product_api.php" />
-        <option value="$PROJECT_DIR$/show_restaurant_product_api.php" />
-        <option value="$PROJECT_DIR$/search_all_items_api.php" />
         <option value="$PROJECT_DIR$/user_registration.php" />
         <option value="$PROJECT_DIR$/user_login.php" />
         <option value="$PROJECT_DIR$/submit_order_api.php" />
@@ -105,6 +125,8 @@
         <option value="$PROJECT_DIR$/edit_item.php" />
         <option value="$PROJECT_DIR$/company_registration.php" />
         <option value="$PROJECT_DIR$/company_info_update.php" />
+        <option value="$PROJECT_DIR$/search_all_items_api.php" />
+        <option value="$PROJECT_DIR$/show_restaurant_product_api.php" />
       </list>
     </option>
   </component>
@@ -283,7 +305,7 @@
       <workItem from="1528204713751" duration="1319000" />
       <workItem from="1528264694599" duration="5176000" />
       <workItem from="1528347608453" duration="1773000" />
-      <workItem from="1528713906343" duration="544000" />
+      <workItem from="1528713906343" duration="1965000" />
     </task>
     <task id="LOCAL-00001" summary="company registration designed">
       <created>1526886953360</created>
@@ -530,11 +552,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528347753274</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="registration and login password and email arrangement changed">
+      <created>1528714487892</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1528714487892</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61895000" />
+    <option name="totallyTimeSpent" value="63316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -584,7 +613,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="show order designed" />
     <MESSAGE value="show order implemented not tested" />
     <MESSAGE value="edit company info designed" />
     <MESSAGE value="edit company info complete" />
@@ -609,7 +637,8 @@
     <MESSAGE value="user profile update api name field added" />
     <MESSAGE value="user order history api changed. item name and restaurant name added" />
     <MESSAGE value="updated sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated sql" />
+    <MESSAGE value="registration and login password and email arrangement changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="registration and login password and email arrangement changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -985,17 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search_all_items_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <marker date="1527863573176" expanded="true" signature="239:288" ph="SELECT * FRO... item" />
-            <marker date="1527863573176" expanded="true" signature="649:701" ph="SELECT NAME company" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/submit_order_api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -1053,16 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/show_restaurant_product_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <marker date="1527785979898" expanded="true" signature="283:324" ph="SELECT * FRO... item" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -1102,6 +1110,27 @@
             <marker date="1528714451278" expanded="true" signature="670:708" ph="SELECT * FRO... company" />
             <marker date="1528714451278" expanded="true" signature="1457:1644" ph="UPDATE compa... " />
             <marker date="1528714451278" expanded="true" signature="2158:2301" ph="UPDATE item " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/show_restaurant_product_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1528717111090" expanded="true" signature="283:324" ph="SELECT * FRO... item" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_all_items_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <marker date="1528717064418" expanded="true" signature="239:288" ph="SELECT * FRO... item" />
+            <marker date="1528717064418" expanded="true" signature="648:700" ph="SELECT NAME company" />
           </folding>
         </state>
       </provider>

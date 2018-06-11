@@ -21,7 +21,6 @@ if (isset($_GET['search_key'])) {
     $response['items'] = array();
 
     while ($row = $result->fetch_assoc()) {
-
         //Getting restaurant name from id
         $restaurant_id = $row['companyID'];
         $get_restaurant_name = "SELECT name FROM company WHERE id = '$restaurant_id'";
@@ -29,7 +28,6 @@ if (isset($_GET['search_key'])) {
 
         $row['restaurant_name'] = $restaurant_name['name'];
         array_push($response['items'], $row);
-
     }
 
 } else {
