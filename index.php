@@ -57,7 +57,8 @@ $result = $connection->query($query);
                  </div>-->
                 <a href="index.php"> <span class="icon-home"></span> Home</a>
                 <a href="login.php"><span class="icon-edit"></span> Register </a>
-                <a href="logout.php"><?php if (isset($_SESSION['companyID'])) echo "Logout"; ?></a>
+                <a href="logout.php"><?php if (isset($_SESSION['companyID'])) echo "Logout"; ?>
+                </a>
 
             </div>
         </div>
@@ -129,7 +130,7 @@ Lower Header Section
                      src="<?php echo $row["image"]; ?>" alt="">
                 <div class="caption cntr">
                     <p><?php echo $row["item_name"]; ?></p>
-                    <p><strong> $<?php echo $row["price"]; ?></strong></p>
+                    <p><strong> <?php echo $row["price"]; ?> tk.</strong></p>
                     <input type="hidden" name="hidden_name" value="<?php echo $row["item_name"]; ?>">
                     <input type="hidden" name="hidden_image_path" value="<?php echo $row["image"]; ?>">
                     <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">

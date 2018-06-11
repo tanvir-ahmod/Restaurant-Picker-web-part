@@ -101,16 +101,17 @@ Lower Header Section
                                     <input type="text" name="restaurant_name">
                                 </div>
                             </div>
-                            <div class="control-group">
-                                <label class="control-label">Password</label>
-                                <div class="controls">
-                                    <input type="password" name="password">
-                                </div>
-                            </div>
+
                             <div class="control-group">
                                 <label class="control-label">Email</label>
                                 <div class="controls">
                                     <input type="email" name="email">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Password</label>
+                                <div class="controls">
+                                    <input type="password" name="password">
                                 </div>
                             </div>
 

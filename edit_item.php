@@ -176,10 +176,7 @@ Lower Header Section
     <div class="row">
 
         <div class="span12">
-            <ul class="breadcrumb">
-                <li><a href="index.php">Home</a> <span class="divider">/</span></li>
-                <li class="active">Login</li>
-            </ul>
+
             <h3> Edit Items</h3>
             <hr class="soft"/>
 

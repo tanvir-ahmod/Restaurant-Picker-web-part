@@ -10,7 +10,6 @@ if (!isset($_SESSION['companyID'])) {
 }
 
 
-
 if (!isset($_GET['id'])) {
     echo "<script>alert('You can not edit this info!')</script>";
     echo '<script>window.location="index.php"</script>';
@@ -155,17 +154,18 @@ Lower Header Section
                                            value="<?= (isset($restaurant_name)) ? $restaurant_name : $company_info['name']; ?>">
                                 </div>
                             </div>
-                            <div class="control-group">
-                                <label class="control-label">Password</label>
-                                <div class="controls">
-                                    <input type="password" name="password">
-                                </div>
-                            </div>
+
                             <div class="control-group">
                                 <label class="control-label">Email</label>
                                 <div class="controls">
                                     <input type="email" name="email"
                                            value="<?= (isset($email)) ? $email : $company_info['email']; ?>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Password</label>
+                                <div class="controls">
+                                    <input type="password" name="password">
                                 </div>
                             </div>
 
