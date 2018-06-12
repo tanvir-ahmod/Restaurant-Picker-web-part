@@ -12,7 +12,8 @@ $response = array();
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $get_restaurant_query = "SELECT * FROM orders WHERE user_id = '$id'";
+    $get_restaurant_query = "SELECT * FROM orders WHERE user_id = '$id' ORDER BY order_time
+                             DESC";
     $result = $connection->query($get_restaurant_query);
 
     $response['error'] = false;
