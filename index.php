@@ -2,8 +2,7 @@
 session_start();
 include('connection.php');
 
-if(!isset($_SESSION['companyID']))
-{
+if (!isset($_SESSION['companyID'])) {
     echo "<script>alert('You are not logged in!')</script>";
     echo '<script>window.location="login.php"</script>';
 }
@@ -95,7 +94,11 @@ Lower Header Section
                         <li class=""><a href="add_items.php">Add Items</a></li>
                     </ul>
                     <ul class="nav">
-                        <li class=""><a href="company_info_update.php?id=<?php echo $id; ?>">Update Organization info</a></li>
+                        <li class=""><a href="company_info_update.php?id=<?php echo $id; ?>">Update Organization
+                                info</a></li>
+                    </ul>
+                    <ul class="nav">
+                        <li class=""><a href="show_orders.php">Show Orders</a></li>
                     </ul>
                     <form action="search.php" method="post" class="navbar-search pull-right">
                         <input type="text" name="search_name" placeholder="Search" class="search-query span2">

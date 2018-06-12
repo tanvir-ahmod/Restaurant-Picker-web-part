@@ -2,22 +2,17 @@
 session_start();
 include('connection.php');
 
-/*//admin authentication
-if (!isset($_SESSION['user']) || !isset($_SESSION['admin'])) {
+//admin authentication
+if (!isset($_SESSION['company']) || !isset($_SESSION['companyID'])) {
     echo "<script>alert('Please login to continue!')</script>";
     echo '<script>window.location="login.php"</script>';
-} else if ($_SESSION['admin'] == 0) {
-    echo "<script>alert('Please login to continue')</script>";
-    echo '<script>window.location="login.php"</script>';
-}*/
-
-//$company_id = $_SESSION['companyID'];
-$company_id = 1;
+}
+$company_id = $_SESSION['companyID'];
 $order_info_query = "SELECT * FROM orders WHERE company_id = '$company_id' ORDER BY order_time
                              DESC";
 $result = $connection->query($order_info_query);
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
