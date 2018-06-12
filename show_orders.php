@@ -13,7 +13,8 @@ if (!isset($_SESSION['user']) || !isset($_SESSION['admin'])) {
 
 //$company_id = $_SESSION['companyID'];
 $company_id = 1;
-$order_info_query = "SELECT * FROM orders WHERE company_id = '$company_id'";
+$order_info_query = "SELECT * FROM orders WHERE company_id = '$company_id' ORDER BY order_time
+                             DESC";
 $result = $connection->query($order_info_query);
 
 ?>
