@@ -48,17 +48,9 @@ $result = $connection->query($query);
     <div class="topNav">
         <div class="container">
             <div class="alignR">
-                <!-- <div class="pull-left socialNw">
-                     <a href="#"><span class="icon-twitter"></span></a>
-                     <a href="#"><span class="icon-facebook"></span></a>
-                     <a href="#"><span class="icon-youtube"></span></a>
-                     <a href="#"><span class="icon-tumblr"></span></a>
-                 </div>-->
                 <a href="index.php"> <span class="icon-home"></span> Home</a>
-                <a href="login.php"><span class="icon-edit"></span> Register </a>
                 <a href="logout.php"><?php if (isset($_SESSION['companyID'])) echo "Logout"; ?>
                 </a>
-
             </div>
         </div>
     </div>
@@ -71,7 +63,6 @@ Lower Header Section
     <div id="gototop"></div>
     <header id="header">
         <div class="row">
-
         </div>
     </header>
 
@@ -100,12 +91,8 @@ Lower Header Section
                     <ul class="nav">
                         <li class=""><a href="show_orders.php">Show Orders</a></li>
                     </ul>
-                    <form action="search.php" method="post" class="navbar-search pull-right">
-                        <input type="text" name="search_name" placeholder="Search" class="search-query span2">
-                    </form>
                     <ul class="nav pull-right">
                         <li class="dropdown">
-
                         </li>
                     </ul>
                 </div>
@@ -118,17 +105,12 @@ Lower Header Section
 
     <h3>Products </h3>
     <ul class="thumbnails">
-
         <?php
-
         //dynamically generating views
         while ($row = $result->fetch_assoc()) {
-
         ?>
-
         <li class="span4">
             <div class="thumbnail">
-
                 <img style="width: 100%; height: 200px; background-repeat: no-repeat;"
                      src="<?php echo $row["image"]; ?>" alt="">
                 <div class="caption cntr">

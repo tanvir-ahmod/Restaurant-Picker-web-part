@@ -29,7 +29,6 @@ $company_info = $connection->query($info_query)->fetch_assoc();
 
 
 if (isset($_POST['submit'])) {
-
     //if not all data sent
     /* if (!isset($_POST['restaurant_name']) || !isset($_POST['password']) ||
          !isset($_POST['email']) || !isset($_POST['phone'])
@@ -109,20 +108,16 @@ if (isset($_POST['submit'])) {
             <div class="alignR">
             </div>
             <a href="index.php"> <span class="icon-home"></span> Home</a>
-            <a href="login.php"><span class="icon-edit"></span> Free Register </a>
             <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a>
 
         </div>
     </div>
 </div>
 
-
 <!--
 Lower Header Section
 -->
 <div class="container">
-
-
     <!--
     Navigation Bar Section
     -->
@@ -131,15 +126,9 @@ Lower Header Section
     Body Section
     -->
     <div class="row">
-
         <div class="span12">
-            <!--<ul class="breadcrumb">
-                <li><a href="index.php">Home</a> <span class="divider">/</span></li>
-                <li class="active">Registration</li>
-            </ul>-->
             <h3>Update</h3>
             <hr class="soft"/>
-
             <div class="row">
                 <div class="span4"></div>
                 <div class="span6">

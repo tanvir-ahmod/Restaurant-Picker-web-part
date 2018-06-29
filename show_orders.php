@@ -55,16 +55,13 @@ $result = $connection->query($order_info_query);
         </div>
     </div>
 </div>
-
 <!--
 Lower Header Section
 -->
 <div class="container">
     <div id="gototop"></div>
     <header id="header">
-
     </header>
-
     <!--
     Navigation Bar Section
     -->
@@ -88,16 +85,13 @@ Lower Header Section
     Body Section
     -->
     <div class="row">
-
         <div class="span12">
             <ul class="breadcrumb">
                 <li><a href="index.php">Home</a> <span class="divider">/</span></li>
                 <li class="active">Admin Panel</li>
             </ul>
-
             <h3>Orders</h3>
             <hr class="soft"/>
-
             <div class="row">
                 <div class="span12">
 
@@ -112,7 +106,6 @@ Lower Header Section
                         </thead>
                         <tbody>
                         <?php while ($row = $result->fetch_assoc()) {
-
 
                             //getting user information
                             $temp_user = $row['user_id'];
@@ -130,33 +123,17 @@ Lower Header Section
                             echo "<td>" . $user['phone'] . "</td>";
                             echo "<td>" . $row['order_time'] . "</td>";
                             echo "</tr>";
-
                         }
                         ?>
                         </tbody>
                     </table>
-
                 </div>
-                <div class="span1"> &nbsp;</div>
-
+                <div class="span1"></div>
             </div>
             <div class="span12">
-
-
             </div>
         </div>
     </div>
-    <!--
-    Clients
-    -->
-
-
-    <!--
-    Footer
-    -->
-
-</div><!-- /container -->
-
-
+</div>
 </body>
 </html>

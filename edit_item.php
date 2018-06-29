@@ -8,7 +8,6 @@ if (!isset($_SESSION['companyID'])) {
     echo '<script>window.location="login.php"</script>';
 }
 
-
 if (!isset($_POST['id']))
     header('location:index.php');
 $id = $_POST['id'];
@@ -23,7 +22,6 @@ if ($item_company_id['companyID'] != $company_id) {
     echo "<script>alert('You are not valid user to perform this task!')</script>";
     echo '<script>window.location="login.php"</script>';
 }
-
 
 $item_search_query = "SELECT * FROM item where id = '$id'";
 $item = $connection->query($item_search_query)->fetch_assoc();
@@ -46,9 +44,9 @@ if (isset($_POST['submit'])) {
     //if image is submitted
     if (isset($_FILES["fileToUpload"])) {
         $image_path = 'product_images/' . $_FILES["fileToUpload"]["name"];
-        $sql_edit = "UPDATE  item SET companyID = '$company_id', item_name = '$item_name', 
+        $sql_edit = "UPDATE item SET item_name = '$item_name', 
                       image='$image_path',price = '$price',
-                      description = '$description' WHERE ID = '$id'";
+                      description = '$description' WHERE id = '$id'";
 
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $image_path)) {
             $connection->query($sql_edit);
@@ -58,18 +56,15 @@ if (isset($_POST['submit'])) {
             echo "<script>alert('Sorry, there was an error inserting items')</script>";
             echo '<script>window.location="index.php"</script>';
         }
-
     } else {
-        $sql_edit = "UPDATE  item SET companyID = '$company_id', item_name = '$item_name',
-                      price = '$price',description = '$description' WHERE ID = '$id'";
+        $sql_edit = "UPDATE  item SET item_name = '$item_name',
+                      price = '$price',description = '$description' WHERE id = '$id'";
         $connection->query($sql_edit);
 
         echo "<script>alert('Successfully updated Item')</script>";
         echo '<script>window.location="index.php"</script>';
-
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -99,87 +94,16 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
 <!--
-	Upper Header Section
--->
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="topNav">
-        <div class="container">
-            <div class="alignR">
-                <a href="index.php"> <span class="icon-home"></span> Home</a>
-                <a href="#"><span class="icon-user"></span> My Account</a>
-                <a href="register.html"><span class="icon-edit"></span> Free Register </a>
-                <a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--
 Lower Header Section
 -->
 <div class="container">
-    <div id="gototop"></div>
-    <header id="header">
-        <div class="row">
-
-        </div>
-    </header>
-
-    <!--
-    Navigation Bar Section
-    -->
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class=""><a href="index.php">Home </a></li>
-
-                    </ul>
-                    <form action="#" class="navbar-search pull-right">
-                        <input type="text" placeholder="Search" class="search-query span2">
-                    </form>
-                    <ul class="nav pull-right">
-                        <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span>
-                                Login <b class="caret"></b></a>
-                            <div class="dropdown-menu">
-                                <form class="form-horizontal loginFrm">
-                                    <div class="control-group">
-                                        <input type="text" class="span2" id="inputEmail" placeholder="Email">
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="password" class="span2" id="inputPassword" placeholder="Password">
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="checkbox">
-                                            <input type="checkbox"> Remember me
-                                        </label>
-                                        <button type="submit" class="shopBtn btn-block">Sign in</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--
     Body Section
     -->
     <div class="row">
-
         <div class="span12">
-
             <h3> Edit Items</h3>
             <hr class="soft"/>
-
             <div class="row">
                 <div class="span4"></div>
                 <div class="span6">
@@ -210,7 +134,6 @@ Lower Header Section
                                            value="<?= (isset($description)) ? $description : $item['description']; ?>">
                                 </div>
                             </div>
-
                             <div class="control-group">
                                 <label class="control-label" for="inputEmail">Image</label>
                                 <div class="controls">
@@ -225,22 +148,10 @@ Lower Header Section
                     </div>
                 </div>
                 <div class="span1"> &nbsp;</div>
-
             </div>
-
         </div>
     </div>
-    <!--
-    Clients
-    -->
-
-
-    <!--
-    Footer
-    -->
-
-</div><!-- /container -->
-
+</div>
 </body>
 </html>
 
