@@ -46,11 +46,8 @@ $result = $connection->query($order_info_query);
     <div class="topNav">
         <div class="container">
             <div class="alignR">
-
                 <a href="index.php"> <span class="icon-home"></span> Home</a>
-                <a href="login.php"><span class="icon-edit"></span> Free Register </a>
                 <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a>
-
             </div>
         </div>
     </div>
@@ -94,7 +91,6 @@ Lower Header Section
             <hr class="soft"/>
             <div class="row">
                 <div class="span12">
-
                     <table class="table table-bordered table-condensed">
                         <thead>
                         <th>Item ID</th>
@@ -106,7 +102,6 @@ Lower Header Section
                         </thead>
                         <tbody>
                         <?php while ($row = $result->fetch_assoc()) {
-
                             //getting user information
                             $temp_user = $row['user_id'];
                             $user_query = "SELECT * FROM users where id = '$temp_user'";
