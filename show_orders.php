@@ -80,13 +80,6 @@ Lower Header Section
                     <ul class="nav">
                         <li class=""><a href="index.php">Home </a></li>
                     </ul>
-
-                    <ul class="nav pull-right">
-                        <li class="dropdown">
-                            <a href="login.php"> Login </a>
-
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -126,8 +119,12 @@ Lower Header Section
                             $user_query = "SELECT * FROM users where id = '$temp_user'";
                             $user = $connection->query($user_query)->fetch_assoc();
 
+                            $item_id = $row['item_id'];
+                            $item_query = "SELECT * FROM item where id = '$item_id'";
+                            $item = $connection->query($item_query)->fetch_assoc();
+
                             echo "<td>" . $row['item_id'] . "</td>";
-                            echo "<td>" . $row['item_name'] . "</td>";
+                            echo "<td>" . $item['item_name'] . "</td>";
                             echo "<td>" . $row['user_id'] . "</td>";
                             echo "<td>" . $row['location'] . "</td>";
                             echo "<td>" . $user['phone'] . "</td>";
