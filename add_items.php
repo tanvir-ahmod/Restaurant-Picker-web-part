@@ -74,12 +74,12 @@ Lower Header Section
                                     <input type="text" name="price">
                                 </div>
                             </div>
-                            <div class="control-group">
+                           <!--  <div class="control-group">
                                 <label class="control-label">Description</label>
                                 <div class="controls">
                                     <input type="text" name="description">
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="control-group">
                                 <label class="control-label" for="inputEmail">Image</label>

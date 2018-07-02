@@ -29,7 +29,7 @@ $item = $connection->query($item_search_query)->fetch_assoc();
 if (isset($_POST['submit'])) {
 
     //if not all data sent
-    if (!isset($_POST['item_name']) || !isset($_POST['companyID']) || !isset($_POST['description']) ||
+    if (!isset($_POST['item_name']) || !isset($_POST['companyID']) ||
         !isset($_POST['price'])
     ) {
         echo "<script>alert('Please submit all data correctly!')</script>";
@@ -39,14 +39,13 @@ if (isset($_POST['submit'])) {
     $item_name = $_POST['item_name'];
     $price = $_POST['price'];
     $company_id = $_POST['companyID'];
-    $description = $_POST['description'];
+   // $description = $_POST['description'];
 
     //if image is submitted
     if (isset($_FILES["fileToUpload"])) {
         $image_path = 'product_images/' . $_FILES["fileToUpload"]["name"];
         $sql_edit = "UPDATE item SET item_name = '$item_name', 
-                      image='$image_path',price = '$price',
-                      description = '$description' WHERE id = '$id'";
+                      image='$image_path',price = '$price' WHERE id = '$id'";
 
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $image_path)) {
             $connection->query($sql_edit);
@@ -127,13 +126,13 @@ Lower Header Section
                                            value="<?= (isset($price)) ? $price : $item['price']; ?>">
                                 </div>
                             </div>
-                            <div class="control-group">
+                           <!--  <div class="control-group">
                                 <label class="control-label">Description</label>
                                 <div class="controls">
                                     <input type="text" name="description"
                                            value="<?= (isset($description)) ? $description : $item['description']; ?>">
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="control-group">
                                 <label class="control-label" for="inputEmail">Image</label>
                                 <div class="controls">

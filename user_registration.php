@@ -31,7 +31,7 @@ if (!isset($_POST['name']) || !isset($_POST['password']) || !isset($_POST['email
 
         $user = array(
             'id' => $insertedID,
-            'name' => $username,
+            'name' => $name,
             'email' => $email,
             'phone' => $phone
         );

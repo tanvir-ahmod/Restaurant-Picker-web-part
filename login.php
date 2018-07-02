@@ -93,31 +93,7 @@ Lower Header Section
     <!--
     Navigation Bar Section
     -->
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class=""><a href="index.php">Home </a></li>
-                    </ul>
-                    <form action="search.php" method="post" class="navbar-search pull-right">
-                        <input type="text" name="search_name" placeholder="Search" class="search-query span2">
-                    </form>
-                    <ul class="nav pull-right">
-                        <li class="dropdown">
-                            <a href="login.php"> Login </a>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!--
     Body Section
     -->
@@ -128,7 +104,7 @@ Lower Header Section
                 <li><a href="index.php">Home</a> <span class="divider">/</span></li>
                 <li class="active">Login</li>
             </ul>
-            <h3> Login</h3>
+            <h3></h3>
             <hr class="soft"/>
 
             <div class="row">

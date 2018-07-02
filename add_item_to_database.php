@@ -40,13 +40,13 @@ if ($uploadOk == 0) {
     $company_id = $_SESSION['companyID'];
     $item_name = $_POST['item_name'];
     $price = $_POST['price'];
-    $description = $_POST['description'];
+  //  $description = $_POST['description'];
 
     $image_path = $target_dir . $_FILES["fileToUpload"]["name"];
 
     //query to insert into item table
-    $insert_into_products = "insert into item (companyID,item_name,description,price,image) 
-                              VALUES ('$company_id','$item_name','$description','$price','$image_path')";
+    $insert_into_products = "insert into item (companyID,item_name,price,image) 
+                              VALUES ('$company_id','$item_name','$price','$image_path')";
     $isInserted = $connection->query($insert_into_products);
 
     //saving image

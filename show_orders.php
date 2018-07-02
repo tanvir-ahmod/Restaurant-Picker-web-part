@@ -46,8 +46,8 @@ $result = $connection->query($order_info_query);
     <div class="topNav">
         <div class="container">
             <div class="alignR">
-                <a href="index.php"> <span class="icon-home"></span> Home</a>
-                <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a>
+                <!-- <a href="index.php"> <span class="icon-home"></span> Home</a>
+                <a href="logout.php"><?php if (isset($_SESSION['user'])) echo "Logout"; ?></a> -->
             </div>
         </div>
     </div>
@@ -62,7 +62,7 @@ Lower Header Section
     <!--
     Navigation Bar Section
     -->
-    <div class="navbar">
+   <!--  <div class="navbar">
         <div class="navbar-inner">
             <div class="container">
                 <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
@@ -77,7 +77,7 @@ Lower Header Section
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--
     Body Section
     -->
